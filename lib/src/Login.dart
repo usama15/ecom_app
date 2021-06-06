@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+  // const Login({Key? key}) : super(key: key);
 
   @override
   _LoginState createState() => _LoginState();
@@ -12,8 +12,12 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: Stack(
+        child: Column(
           children: [
+            SizedBox(
+              height: 100,
+            ),
+            Text("Login"),
             Center(
               child: Container(
                 width: 300,
@@ -21,12 +25,15 @@ class _LoginState extends State<Login> {
                   decoration: InputDecoration(
                     labelText: 'Email',
                     border: OutlineInputBorder(),
+                    icon: Icon(Icons.email),
                   ),
                 ),
               ),
             ),
+
           ],
         ),
+
       ),
     );
   }
